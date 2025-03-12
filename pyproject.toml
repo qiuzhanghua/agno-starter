@@ -1,0 +1,20 @@
+[project]
+name = "agno-starter"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "agno>=1.1.9",
+    "fastapi>=0.115.11",
+    "openai>=1.66.2",
+    "pgvector>=0.3.6",
+    "psycopg[binary]>=3.2.5",
+    "pypdf>=5.3.1",
+    "sqlalchemy>=2.0.39",
+    "uvicorn>=0.34.0",
+]
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
