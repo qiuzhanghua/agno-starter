@@ -24,7 +24,7 @@ qdrant_db = Qdrant(
 
 
 pdf_knowledge_base = PDFKnowledgeBase(
-    path="/Users/q/Desktop/神经网络与深度学习.pdf",
+    path="/Users/q/Desktop/课程表.pdf",
     vector_db=qdrant_db,
     reader=PDFReader(chunk=True),
     chunking_strategy=AgenticChunking(model=Ollama(id="qwq")),
@@ -40,4 +40,4 @@ agent = Agent(
 
 # agent.print_response("How to make Thai curry?", markdown=True)
 
-agent.print_response("邱锡鹏写的书的名字？", markdown=True)
+agent.print_response("课程表里有什么？", markdown=True)
