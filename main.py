@@ -4,11 +4,13 @@ from fastapi import FastAPI
 # from agno.models.openai import OpenAIChat
 from agno.agent import Agent, RunResponse
 from agno.models.deepseek import DeepSeek
+from agno.models.ollama import Ollama
 
 app = FastAPI()
 
 agent = Agent(
-    model=DeepSeek(),
+    # model=DeepSeek(),
+    model=Ollama(id="gemma3"),
     description="You are a helpful assistant.",
     markdown=True,
 )
